@@ -52,16 +52,20 @@ img.medium-size {
     width: 500px;
 }
 
+footer {
+    border-top: 2px solid darkgreen;
+
+}
+
 footer ul {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color:darkgoldenrod;
+    font-family:monospace;
     font-size:large;
     list-style: none;
-    padding: 0;
-    margin: 10rem 0 0;
+    padding-top: 1;
+    margin: 1rem 0 0;
     display: flex;
-    justify-content:space-around;
-    border: 4px black;
+    justify-content:space-evenly;
+    
 }
 
 footer ul a {
