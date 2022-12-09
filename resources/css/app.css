@@ -1,0 +1,71 @@
+/*ceci est un commentaire*/
+
+body {background-color:rgb(175, 170, 21)
+}
+
+
+
+header nav ul {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:large;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+header nav ul a {
+    background-color:darkgoldenrod;
+    padding: 1rem 10rem ;
+    color: black;
+    border: 2px solid green;
+    text-decoration: none;
+
+}
+
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    color: rgb(7, 81, 7);
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(93, 13, 13);
+}
+
+h3 {
+    font-size: 3rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+feBlend
+img{
+    max-width: 100%;
+}
+
+img.medium-size {
+    width: 500px;
+}
+
+footer ul {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:darkgoldenrod;
+    font-size:large;
+    list-style: none;
+    padding: 0;
+    margin: 10rem 0 0;
+    display: flex;
+    justify-content:space-around;
+    border: 4px black;
+}
+
+footer ul a {
+    padding: 1rem 0rem ;
+    color: black;
+    text-decoration: none;
+}
