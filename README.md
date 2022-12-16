@@ -5,7 +5,7 @@ Projet de site d'un restaurant construit avec Laravel 9.
 ## Prérequis
 
 - PHP 8.1
-- MariaDB 10 ou MySql 5
+- MariaDB 10 et MySql 5
 - Composer 2.3.5
 - Nodejs 18.12.1 et npm 8.12.0
 
