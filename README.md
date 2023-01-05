@@ -38,3 +38,4 @@ Les images suivantes ont été utilisées :
 [rectangular beige wooden tables and chair photo – Free Image on Unsplash](https://unsplash.com/photos/Ciqxn7FE4vE)
 [persona che tiene due ciotole di cibi cotti photo – Image Aliments gratuite sur Unsplash](https://unsplash.com/fr/photos/HPhbGuaoEwk)
 [uomo che taglia i guanti d&#39;aglio photo – Image Restaurant gratuite sur Unsplash](https://unsplash.com/fr/photos/5JeTin55H9U)
+verdura e carne sulla ciotola photo – Photo Aliments Gratuite sur Unsplash (https://unsplash.com/fr/photos/kcA-c3f_3FE)
