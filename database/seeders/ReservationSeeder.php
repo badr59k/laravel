@@ -64,7 +64,8 @@ class ReservationSeeder extends Seeder
             $reservation->prenom = $faker->FirstName();
 
             // jour
-            $reservation->jour = $faker->date('Y-m-d');
+            $reservation->jour = $datetime = $faker->datetimeBetween('-6 months', '+6 months');
+            $reservation->jour = $datetime->format('Y-m-d');
 
             // heure
             $reservation->heure = $faker->time('H:i');
