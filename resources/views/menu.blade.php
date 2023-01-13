@@ -6,7 +6,7 @@
     <h2> Menu </h2>
     @foreach ($categories as $categorie)
         <h4>{{$categorie->nom}}</h4>
-        <p> {{ $categorie-> description }}</p>
+        <p> {{$categorie->description }}</p>
 
         <ul>
             @foreach ($categorie->platsSortedByNom as $plat)
