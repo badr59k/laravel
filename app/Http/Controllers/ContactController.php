@@ -11,18 +11,26 @@ class ContactController extends Controller
     {
         $adresse = DB::table('restaurant')
         ->where('cle', '=', 'adresse')
-        ->get()
         ->first()
         ;
         $tel = DB::table('restaurant')
         ->where('cle', '=', 'tel')
-        ->get()
+        ->first()
+        ;
+        $map = DB::table('restaurant')
+        ->where('cle', '=', 'map')
+        ->first()
+        ;
+        $horaire = DB::table('restaurant')
+        ->where('cle', '=', 'horaire')
         ->first()
         ;
 
         return view('contact', [
             'adresse' => $adresse->valeur,
             'tel' => $tel->valeur,
+            'map' => $map->valeur,
+            'horaire' => $horaire->valeur,
         ]);
     }
 }
