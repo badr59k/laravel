@@ -32,7 +32,6 @@
                 <li><a href="{{ route('reservation')}}">Réservation</a></li>
                 <li>//</li>
                 <li><a href="{{ route('mentions_legales')}}">Mentions Légales</a></li>
-
             </ul>
     </footer>
 </body>

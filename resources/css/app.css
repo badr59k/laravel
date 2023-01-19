@@ -3,8 +3,6 @@
 body {background-color:rgb(175, 170, 21)
 }
 
-
-
 header nav ul {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:large;
@@ -22,9 +20,7 @@ header nav ul a {
     color: black;
     border: 2px solid green;
     text-decoration: none;
-
 }
-
 
 h1 {
     font-size: 5rem;
@@ -42,7 +38,13 @@ h3 {
     font-size: 3rem;
     font-family:'Courier New', Courier, monospace;
 }
-h4 {
+
+h4{
+    font-size: 2rem;
+    font-family:'Courier New', Courier, monospace;
+}
+
+p {
     font-size: 2rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
@@ -58,7 +60,6 @@ img.medium-size {
 
 footer {
     border-top: 2px solid darkgreen;
-
 }
 
 footer ul {
@@ -69,7 +70,6 @@ footer ul {
     margin: 1rem 0 0;
     display: flex;
     justify-content:space-evenly;
-    
 }
 
 footer ul a {

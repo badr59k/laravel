@@ -4,8 +4,8 @@
 
 @section('content')
     <h2> Contact </h2>
-    <h4>Adresse : {{ $adresse}}</h4>
-    <h4>Tel : {{$tel}}</h4>
-    <h4>{{$horaire}}</h4>
-    {{!!$map!!}}
+    <p>Adresse : {{ $adresse}}</p>
+    <p>Tel : {{$tel}}</p>
+    <p>{{$horaire}}</p>
+    {!!$map!!}
 @endsection
