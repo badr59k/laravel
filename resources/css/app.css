@@ -1,6 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /*ceci est un commentaire*/
 
-body {background-color:rgb(175, 170, 21)
+body {background-color:rgb(205, 213, 95)
 }
 
 header nav ul {
@@ -15,7 +18,7 @@ header nav ul {
 }
 
 header nav ul a {
-    background-color:darkgoldenrod;
+    background-color:rgb(194, 153, 50);
     padding: 1rem 10rem ;
     color: black;
     border: 2px solid green;

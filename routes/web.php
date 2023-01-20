@@ -6,6 +6,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MentionsLegalesController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,16 @@ Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/mentions_legales', [MentionsLegalesController::class, 'index'] )->name('mentions_legales');
+
+// routes de breeze
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
