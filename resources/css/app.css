@@ -52,6 +52,15 @@ p {
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
+table th {
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+table td {
+    padding: 0.5rem;
+    border: 2px solid black;
+}
+
 feBlend
 img{
     max-width: 100%;
@@ -80,3 +89,35 @@ footer ul a {
     color: black;
     text-decoration: none;
 }
+
+form {
+    padding : 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form .corps_formulaire div {
+    position: relative;
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form button {
+    margin-top: 20px;
+    width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(108, 108, 7);
+    color: white; 
+    font-size: 15px;
+    border: none;  
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+form button:hover {
+    transform: scale(1.03);
+ }
