@@ -18,7 +18,7 @@ header nav ul {
 }
 
 header nav ul a {
-    background-color:rgb(194, 153, 50);
+    background-color:rgb(170, 177, 63);
     padding: 1rem 10rem ;
     color: black;
     border: 2px solid green;
@@ -70,6 +70,11 @@ img.medium-size {
     width: 500px;
 }
 
+img.menu--photo-plat{
+    margin: 10px;
+    width: 150px;
+}
+
 footer {
     border-top: 2px solid darkgreen;
 }
@@ -119,5 +124,5 @@ form button {
 }
 
 form button:hover {
-    transform: scale(1.03);
+    transform: scale(1.01);
  }
