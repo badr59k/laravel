@@ -68,6 +68,37 @@ class ReservationController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        dd($request->all());
+        
+        // dump($request->has('baz'));
+        // dump($request->get('baz', 'foo'));
+        // dump($request->has('nom'));
+        // dump($request->get('nom'));
+        // dd($request->all());
+        
+        $validated = $request->validate([
+            'nom' => 'required|min:2|max:100',
+            'prenom' => 'required|min:2|max:100',
+            'jour' => 'required|date|date_format:Y-m-d|after_or_equal:today',
+            'heure' => 'required|date_format:H:i',
+            'nombre_personnes' => 'required|numeric|gte:1|lte:20',
+            'tel' => 'required|regex:/^[0-9]{2} *[0-9]{2} *[0-9]{2} *[0-9]{2} *[0-9]{2}$/',
+            'email' => 'required|email:rfc,dns',
+        ]);
+
+        // récupération de la réservation
+        $reservation = Reservation::find($id);
+        
+        $reservation->nom = $request->get('nom');
+        $reservation->prenom = $request->get('prenom');
+        $reservation->jour = $request->get('jour');
+        $reservation->heure = $request->get('heure');
+        $reservation->nombre_personnes = $request->get('nombre_personnes');
+        $reservation->tel = $request->get('tel');
+        $reservation->email = $request->get('email');
+        $reservation->save();
+
+        $request->session()->flash('confirmation', 'Vos modifications ont été enrgistrées.');
+
+        return redirect()->route('admin.reservation.edit', ['id' => $reservation->id]);
     }
 }

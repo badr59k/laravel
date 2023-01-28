@@ -33,6 +33,7 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/mentions_legales', [MentionsLegalesController::class, 'index'] )->name('mentions_legales');
 
+// Routes pour admin reservation
 Route::get('/admin/reservation', [AdminReservationController::class, 'index'])->middleware('auth')->name('admin.reservation.index');
 
 Route::get('/admin/reservation/create', [AdminReservationController::class, 'create'])->middleware('auth')->name('admin.reservation.create');

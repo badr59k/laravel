@@ -125,4 +125,26 @@ form button {
 
 form button:hover {
     transform: scale(1.01);
- }
+}
+
+.form-error--message{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 50%;
+    background-color: red;
+    font-size: 15px; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.form-confirmation--message{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 50%;
+    background-color: green;
+    font-size: 15px; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
