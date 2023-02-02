@@ -37,6 +37,9 @@
     @show
     <footer>
             <ul>
+                @guest
+                <li> <a href="{{ route('login')}}"> Connexion </a></li>
+                @endguest
                 <li>Copyright O Cnamo, 2022</li>
                 <li>//</li>
                 <li><a href="{{ route('contact')}}">Contact</a></li>

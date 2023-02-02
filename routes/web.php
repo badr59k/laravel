@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
+use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
@@ -68,6 +69,18 @@ Route::get('/admin/etiquette/{id}/edit', [AdminEtiquetteController::class, 'edit
 Route::put('/admin/etiquette/{id}', [AdminEtiquetteController::class, 'update'])->middleware('auth')->name('admin.etiquette.update');
 
 Route::delete('/admin/etiquette/{id}', [AdminEtiquetteController::class, 'delete'])->middleware('auth')->name('admin.etiquette.delete');
+
+// Routes pour admin Restaurant
+Route::get('/admin/restaurant', [AdminRestaurantController::class, 'index'])->middleware('auth')->name('admin.restaurant.index');
+
+Route::get('/admin/restaurant/create', [AdminRestaurantController::class, 'create'])->middleware('auth')->name('admin.restaurant.create');
+Route::post('/admin/restaurant', [AdminRestaurantController::class, 'store'])->middleware('auth')->name('admin.restaurant.store');
+
+Route::get('/admin/restaurant/{id}/edit', [AdminRestaurantController::class, 'edit'])->middleware('auth')->name('admin.restaurant.edit');
+Route::put('/admin/restaurant/{id}', [AdminRestaurantController::class, 'update'])->middleware('auth')->name('admin.restaurant.update');
+
+Route::delete('/admin/restaurant/{id}', [AdminRestaurantController::class, 'delete'])->middleware('auth')->name('admin.restaurant.delete');
+
 
 // routes de breeze
 Route::get('/dashboard', function () {
