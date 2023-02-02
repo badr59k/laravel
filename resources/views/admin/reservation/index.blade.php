@@ -5,6 +5,12 @@
 @section('content')
     <h2> Admin - Réservation - Liste </h2>
 
+    @if (Session::has('confirmation'))
+        <div class=form-confirmation--message>
+            {{ Session::get('confirmation')}}
+        </div>
+    @endif
+
     <div>
         <a href="{{ route('admin.reservation.create')}}">Ajouter</a>
     </div>
@@ -28,7 +34,17 @@
                     <td> {{$reservation->nombre_personnes}}</td> 
                     <td> {{$reservation->tel}} </td>
                     <td> {{$reservation->email}} </td>
-                    <td><a href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">modifier</a></td>
+                    <td>    
+                        <a href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">modifier</a>
+                    
+                        <form action="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Supprimer</button>
+                            {{-- <a href="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
+                        </form>
+                    </td>
+
                 </tr> 
             @endforeach
         </tbody>
