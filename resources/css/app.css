@@ -6,6 +6,7 @@
 body {background-color:rgb(205, 213, 95)
 }
 
+
 header nav ul {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:large;
@@ -14,16 +15,16 @@ header nav ul {
     margin: 1rem 0 0;
     display: flex;
     justify-content: space-around;
-    
 }
 
 header nav ul a {
     background-color:rgb(170, 177, 63);
-    padding: 1rem 10rem ;
+    padding: 1rem 7rem ;
     color: black;
     border: 2px solid green;
     text-decoration: none;
 }
+
 
 h1 {
     font-size: 5rem;

@@ -19,6 +19,7 @@
     
     <form action="{{ route ('admin.categorie.update', ['id' => $categorie ->id])}}" method="post">
         @csrf
+        @method('PUT')
         <div class ="corps_formulaire">
             <div>
                 <label> Nom </label>

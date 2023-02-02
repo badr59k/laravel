@@ -19,6 +19,7 @@
 
     <form action="{{ route ('admin.reservation.update', ['id' => $reservation ->id])}}" method="post">
         @csrf
+        @method('PUT')
         <div class ="corps_formulaire">
             <div>
                 <label> Nom </label>
@@ -33,54 +34,58 @@
                 <label> Prénom </label>
                 <input class="@error('prenom') form--input--error @enderror" type="text" name="prenom" id="" value="{{old('prenom', $reservation->prenom) }}">
                 @error('prenom')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <div>
                 <label> Jour </label>
                 <input class="@error('jour') form--input--error @enderror" type="date" name="jour" id="" value="{{old('jour', $reservation->jour) }}">
                 @error('jour')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <div>
                 <label> Heure</label>
-                <input class="@error('heure') form--input--error @enderror" type="time" name="heure" id="" value="{{old('heure', $reservation->heure)}}">
+                <select name="heure" id="">
+                    @foreach ($creneaux_horaires as $creneau_horaire)
+                        <option value="{{ $creneau_horaire }}" @if (old('heure', $reservation->heure) == $creneau_horaire) selected @endif>{{ $creneau_horaire }}</option>
+                    @endforeach
+                </select>
                 @error('heure')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <div>
                 <label> Couverts </label>
                 <input class="@error('nombre_personnes') form--input--error @enderror" type="number" name="nombre_personnes" id="" value="{{old('nombre_personnes',$reservation->nombre_personnes) }}">
                 @error('nombre_personnes')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <div>
                 <label> Tel </label>
                 <input placeholder="06 12 34 56 78" class="@error('tel') form--input--error @enderror" type="tel" name="tel" id="" value="{{old('tel', $reservation->tel) }}">
                 @error('tel')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
             <div>
                 <label> Email</label>
                 <input placeholder="ocnamo@contact.net" class="@error('email') form--input--error @enderror" type="email" name="email" id="" value="{{old('email', $reservation->email) }}">
                 @error('email')
-                <div class=form-error--message> 
-                    {{ $message }}
-                </div>
+                    <div class=form-error--message> 
+                        {{ $message }}
+                    </div>
                 @enderror
             </div>
         </div>
