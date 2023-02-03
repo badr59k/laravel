@@ -148,3 +148,15 @@ form button:hover {
     border-radius: 5px;
     color: white;
 }
+
+
+.form--radio-buttons--scrollable,
+.form--checkboxes--scrollable {
+    border: 1px solid black;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.form--radio-buttons-image {
+    height: 200px;
+}

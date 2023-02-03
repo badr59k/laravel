@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ReservationController as AdminReservationControll
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
+use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
@@ -36,8 +37,15 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 Route::get('/mentions_legales', [MentionsLegalesController::class, 'index'] )->name('mentions_legales');
 
+// Routes du BACK OFFICE
 
-// Routes pour admin reservation
+// CRUD plats
+Route::get('/admin/plat', [AdminPlatController::class, 'index'])->middleware('auth')->name('admin.plat.index');
+
+Route::get('/admin/plat/create', [AdminPlatController::class, 'create'])->middleware('auth')->name('admin.plat.create');
+Route::post('/admin/plat/', [AdminPlatController::class, 'store'])->middleware('auth')->name('admin.plat.store');
+
+// CRUD reservation
 Route::get('/admin/reservation', [AdminReservationController::class, 'index'])->middleware('auth')->name('admin.reservation.index');
 
 Route::get('/admin/reservation/create', [AdminReservationController::class, 'create'])->middleware('auth')->name('admin.reservation.create');
@@ -48,7 +56,7 @@ Route::put('/admin/reservation/{id}', [AdminReservationController::class, 'updat
 
 Route::delete('/admin/reservation/{id}', [AdminReservationController::class, 'delete'])->middleware('auth')->name('admin.reservation.delete');
 
-// Routes pour admin categorie
+// CRUD categorie
 Route::get('/admin/categorie', [AdminCategorieController::class, 'index'])->middleware('auth')->name('admin.categorie.index');
 
 Route::get('/admin/categorie/create', [AdminCategorieController::class, 'create'])->middleware('auth')->name('admin.categorie.create');
@@ -59,7 +67,7 @@ Route::put('/admin/categorie/{id}', [AdminCategorieController::class, 'update'])
 
 Route::delete('/admin/categorie/{id}', [AdminCategorieController::class, 'delete'])->middleware('auth')->name('admin.categorie.delete');
 
-// Routes pour admin Etiquette
+// CRUD Etiquette
 Route::get('/admin/etiquette', [AdminEtiquetteController::class, 'index'])->middleware('auth')->name('admin.etiquette.index');
 
 Route::get('/admin/etiquette/create', [AdminEtiquetteController::class, 'create'])->middleware('auth')->name('admin.etiquette.create');
