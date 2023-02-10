@@ -3,7 +3,9 @@
 @tailwind utilities;
 /*ceci est un commentaire*/
 
-body {background-color:rgb(205, 213, 95)
+body {
+    background-color:rgb(205, 213, 95);
+    margin-left: 2%;
 }
 
 header nav ul {
@@ -159,4 +161,19 @@ form button:hover {
 
 .form--radio-buttons-image {
     height: 200px;
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table .button-supprimer {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    background-color: rgb(154, 19, 19);
+    width: 8rem;
+}
+
+table .lien-modif {
+    color: black;
 }

@@ -34,13 +34,15 @@
                     <td> {{$reservation->nombre_personnes}}</td> 
                     <td> {{$reservation->tel}} </td>
                     <td> {{$reservation->email}} </td>
-                    <td>    
-                        <a href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">modifier</a>
+                    <td>  
+                        <center>
+                            <a class="lien-modif" href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">Modifier</a>
+                        </center>  
                     
                         <form action="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Supprimer</button>
+                            <button class="button-supprimer" type="submit">Supprimer</button>
                             {{-- <a href="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
                         </form>
                     </td>
