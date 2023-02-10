@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ReservationController as AdminReservationControll
 use App\Http\Controllers\Admin\CategorieController as AdminCategorieController;
 use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
+use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
@@ -89,6 +90,16 @@ Route::put('/admin/restaurant/{id}', [AdminRestaurantController::class, 'update'
 
 Route::delete('/admin/restaurant/{id}', [AdminRestaurantController::class, 'delete'])->middleware('auth')->name('admin.restaurant.delete');
 
+// CRUD Actu
+Route::get('/admin/actu', [AdminActuController::class, 'index'])->middleware('auth')->name('admin.actu.index');
+
+Route::get('/admin/actu/create', [AdminActuController::class, 'create'])->middleware('auth')->name('admin.actu.create');
+Route::post('/admin/actu', [AdminActuController::class, 'store'])->middleware('auth')->name('admin.actu.store');
+
+Route::get('/admin/actu/{id}/edit', [AdminActuController::class, 'edit'])->middleware('auth')->name('admin.actu.edit');
+Route::put('/admin/actu/{id}', [AdminActuController::class, 'update'])->middleware('auth')->name('admin.actu.update');
+
+Route::delete('/admin/actu/{id}', [AdminActuController::class, 'delete'])->middleware('auth')->name('admin.actu.delete');
 
 // routes de breeze
 Route::get('/dashboard', function () {
