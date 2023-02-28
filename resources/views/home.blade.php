@@ -12,7 +12,7 @@
                 <img src="{{asset('img/jay-wennington-N_Y88TWmGwA-unsplash.jpg')}}"  alt="ambiance">
             </div>
         </div>
-        <button id="bouton-reservation"><a href="{{ route('reservation')}}"> Réservation</a></button>
+        <button id="bouton-reservation"><a href="{{ route('reservation')}}"> Réserver</a></button>
     </center>
 
     <h3> Dernières actualités : </h3>
