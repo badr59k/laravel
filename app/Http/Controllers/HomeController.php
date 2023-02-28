@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actu;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $actus = Actu::all();
+
+        return view('home', [
+            'actus' => $actus,
+        ]);
     }
 }
