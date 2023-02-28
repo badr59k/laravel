@@ -15,7 +15,7 @@
         <a href="{{ route('admin.reservation.create')}}">Ajouter</a>
     </div>
 
-    <table>
+    <table width="100%">
         <tbody>  
             <tr>
                 <th>Nom</th>
@@ -36,15 +36,15 @@
                     <td> {{$reservation->email}} </td>
                     <td>  
                         <center>
-                            <a class="lien-modif" href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">Modifier</a>
-                        </center>  
-                    
-                        <form action="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
-                            @csrf
-                            @method('DELETE')
-                            <button class="button-supprimer" type="submit">Supprimer</button>
-                            {{-- <a href="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
-                        </form>
+                            <a class="lien-modif" href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">Modifier</a> 
+                        
+                            <form action="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
+                                @csrf
+                                @method('DELETE')
+                                <button class="button-supprimer" type="submit">Supprimer</button>
+                                {{-- <a href="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
+                            </form>
+                        </center> 
                     </td>
 
                 </tr> 
