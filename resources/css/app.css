@@ -6,6 +6,7 @@
 body {
     background-color:rgb(205, 213, 95);
     margin-left: 2%;
+    margin-right: 2%;
 }
 
 header nav ul {
@@ -68,8 +69,35 @@ img{
     max-width: 100%;
 }
 
-img.medium-size {
-    width: 500px;
+#caroussel{
+    width: 640px;
+    overflow: hidden;
+}
+
+.image-ambiance {
+    display: flex;
+    animation-duration: 20s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mesImages {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-640px);
+    }
+    50% {
+        transform: translateX(-1280px);
+    }
+    75% {
+        transform: translateX(-1920px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
 }
 
 img.menu--photo-plat{
@@ -79,6 +107,7 @@ img.menu--photo-plat{
 
 footer {
     border-top: 2px solid darkgreen;
+    margin-top: 20px;
 }
 
 footer ul {
@@ -112,6 +141,7 @@ form .corps_formulaire div {
 
 form button {
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 50%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(108, 108, 7);
@@ -176,4 +206,30 @@ table .button-supprimer {
 
 table .lien-modif {
     color: black;
+}
+
+.image-deconnexion {
+    background-color: none;
+    max-width: 50px;
+
+}
+
+#bouton-reservation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 640px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(108, 108, 7);
+    color: white; 
+    font-size: 15px;
+    border: none;  
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#bouton-reservation:hover {
+    transform: scale(1.01);
 }
