@@ -1,17 +1,38 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('base')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('page_title', 'Dashboard')
+
+@section('content')
+    <table width = "100%">
+        <tr>
+            <th>Réservation</th>
+            <td><a href="{{ route('admin.reservation.index')}}">Liste des réservations</a></td>
+            <td><a href="{{ route('admin.reservation.create')}}">Création d'une réservation</a></td>
+        </tr>
+        <tr>
+            <th>Actualités</th>
+            <td><a href="{{ route('admin.actu.index')}}">Liste des actualités</a></td>
+            <td><a href="{{ route('admin.actu.create')}}">Création d'une actualité</a></td>
+        </tr>
+        <tr>
+            <th>Catégories</th>
+            <td><a href="{{ route('admin.categorie.index')}}">Liste des catégories</a></td>
+            <td><a href="{{ route('admin.categorie.create')}}">Création d'une catégorie</a></td>
+        </tr>
+        <tr>
+            <th>Plats</th>
+            <td><a href="{{ route('admin.plat.index')}}">Liste des plats</a></td>
+            <td><a href="{{ route('admin.plat.create')}}">Création d'un plat</a></td>
+        </tr>
+        <tr>
+            <th>Etiquette</th>
+            <td><a href="{{ route('admin.etiquette.index')}}">Liste des étiquettes</a></td>
+            <td><a href="{{ route('admin.etiquette.create')}}">Création d'une étiquette</a></td>
+        </tr>
+        <tr>
+            <th>Information du restaurant</th>
+            <td><a href="{{ route('admin.restaurant.index')}}">Liste des informations du restaurant</a></td>
+            <td><a href="{{ route('admin.restaurant.create')}}">Ajout d'information sur le restaurant</a></td>
+        </tr>
+    </table>
+@endsection
