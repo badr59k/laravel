@@ -14,21 +14,29 @@
         <nav>
             <ul>
                 @auth
-                    <li> <a href="{{ route('dashboard')}}"> Tableau de bord</a> </li> 
+                <table class="header-admin" width ="100%">
+                    <td>
+                        <li> <a href="{{ route('dashboard')}}"> Tableau de bord</a> </li> 
+                    </td>
+                    <td>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();"> Déconnexion</a>
                         </form>
+                    </td>
+                </table>
                 @else   
-                    <li><a href="{{ route('home')}}">Accueil</a></li>
-                    <li><a href="{{ route('menu')}}">Menu</a></li>
-                    <li><a href="{{ route('contact')}}">Contact</a></li>
-                    <li><a href="{{ route('reservation')}}">Réservation</a></li>
+                    <table class="header-user" width ="100%">
+                            <td><a href="{{ route('home')}}">Accueil</a></td>
+                            <td><a href="{{ route('menu')}}">Menu</a></td>
+                            <th><a href="{{ route('home')}}">O'CNAMO</a></th>
+                            <td><a href="{{ route('contact')}}">Contact</a></td>
+                            <td><a href="{{ route('reservation')}}">Réserver</a></td>
+                    </table>
                 @endauth
             </ul>
         </nav>
     </header>
-    <h1> Restaurant O'Cnamo </h1>
     @section('content')
     @show
     <footer>

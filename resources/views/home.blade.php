@@ -11,8 +11,8 @@
                 <img src="{{asset('img/clem-onojeghuo-zlABb6Gke24-unsplash.jpg')}}"  alt="resto exterieur">
                 <img src="{{asset('img/jay-wennington-N_Y88TWmGwA-unsplash.jpg')}}"  alt="ambiance">
             </div>
+            <a href="{{ route('reservation')}}"><button id="bouton-reservation"> Réserver</button></a>
         </div>
-        <button id="bouton-reservation"><a href="{{ route('reservation')}}"> Réserver</a></button>
     </center>
 
     <h3> Dernières actualités : </h3>
