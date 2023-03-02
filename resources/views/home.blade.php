@@ -16,7 +16,7 @@
     </center>
 
     <h3> Dernières actualités : </h3>
-        <table>
+        <table width="50%">
             @foreach ($actus as $actu)
             <tr>
                 <td> {{$actu->jour_publication }}</td>

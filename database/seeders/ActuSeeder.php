@@ -44,7 +44,7 @@ class ActuSeeder extends Seeder
             $actu->save();
         }
 
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < 0; $i++) {
             $actu = new Actu();
 
             $actu->jour_publication = $datetime = $faker->datetimeBetween('-6 months', '+6 months');
