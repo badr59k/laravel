@@ -67,9 +67,9 @@ class ActuController extends Controller
     public function update(Request $request, int $id)
     {   
         $validated = $request->validate([
-            'jour_publication' => 'required|date|date_format:Y-m-d|after_or_equal:today',
+            'jour_publication' => 'required|date|date_format:Y-m-d|',
             'heure_publication' => 'required|date_format:H:i',
-            'texte' => 'required|min:2|max:100',
+            'texte' => 'required|min:2',
         ]);
 
         $actu = Actu::find($id);
