@@ -4,8 +4,18 @@
 
 @section('content')
     <h2> Contact </h2>
-    <p>Adresse : {{ $adresse}}</p>
-    <p>Tel : {{$tel}}</p>
-    <p>{{$horaire}}</p>
-    {!!$map!!}
+        <table class="table-contact">
+            <tr>
+                <th>Adresse</th>
+                <th>Tel</th>
+                <th>Horaires</th>
+            </tr>
+            <tr>
+                <td>{{ $adresse}}</td>
+                <td>{{$tel}}</td>
+                <td>{{$horaire}}</td>
+            </tr>
+        </table>
+        {!!$map!!}
+    <br>
 @endsection
