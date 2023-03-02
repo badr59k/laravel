@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name')}} @yield('page_title')</title>
     @section('vite')
@@ -27,11 +28,11 @@
                 </table>
                 @else   
                     <table class="header-user" width ="100%">
-                            <td><a href="{{ route('home')}}">Accueil</a></td>
-                            <td><a href="{{ route('menu')}}">Menu</a></td>
-                            <th><a href="{{ route('home')}}">O'CNAMO</a></th>
-                            <td><a href="{{ route('contact')}}">Contact</a></td>
-                            <td><a href="{{ route('reservation')}}">Réserver</a></td>
+                            <td><a href="{{ route('home')}}"></a>Accueil</i></td>
+                            <td><a href="{{ route('menu')}}"></a>Menu</td>
+                            <th><a href="{{ route('home')}}"></a>O'CNAMO</th>
+                            <td><a href="{{ route('contact')}}"></a>Contact</td>
+                            <td><a href="{{ route('reservation')}}"></a>Réserver</td>
                     </table>
                 @endauth
             </ul>
@@ -42,7 +43,7 @@
     <footer>
             <ul>
                 @guest
-                <li> <a href="{{ route('login')}}"> Connexion </a></li>
+                <li> <a href="{{ route('login')}}"> <i class="fa-regular fa-user"></i></a></li>
                 @endguest
                 <li>Copyright O Cnamo, 2022</li>
                 <li>//</li>

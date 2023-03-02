@@ -3,6 +3,7 @@
 @section('page_title', 'Dashboard')
 
 @section('content')
+    <h1>Dashboard</h1>
     <table width = "100%">
         <tr>
             <th>Réservation</th>

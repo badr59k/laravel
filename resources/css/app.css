@@ -5,8 +5,8 @@
 
 body {
     background-color:rgb(200, 206, 126);
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .header-user{
@@ -14,7 +14,8 @@ body {
     text-align: center;
 }
 .header-user th {
-    border: 2px solid black;
+    position: relative;
+    border: none;
     padding: 1rem;
     width: 30%;
     font-size: 2rem;
@@ -22,9 +23,19 @@ body {
 }
 .header-user td {
     border: none;
+    position: relative;
     padding: 1rem;
     width: 15%;
     font-size: 1.5rem;
+}
+
+.header-user td a,
+.header-user th a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .header-admin {
@@ -88,7 +99,7 @@ img{
     margin-left: none;
     margin-right: none;
     width: 100%;
-    height: 700px;
+    height: 625px;
     overflow: hidden;
 }
 
@@ -226,11 +237,6 @@ table .lien-modif {
     color: black;
 }
 
-.image-deconnexion {
-    background-color: none;
-    max-width: 50px;
-
-}
 
 #bouton-reservation {
     position: absolute;
@@ -255,3 +261,38 @@ table .lien-modif {
 #bouton-reservation:hover {
     transform: translateX(-50%)  translateY(-50%) scale(1.01);;
 }
+
+.table-contact {
+    width: 100%;
+    text-align: center;
+}
+
+.table-contact th {
+    border: 1px solid black;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: rgb(162, 168, 95);
+}
+
+.table-contact td {
+    border: 1px solid black;
+    padding: 1rem;
+    width: 15%;
+    font-size: 1rem;
+}
+
+iframe.map {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.menu {
+    background-color: rgb(216, 220, 173);
+    
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
