@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use stdClass;
 use App\Models\Actu;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,10 +27,16 @@ class ActuController extends Controller
     public function create()
     {
         // valeur par defaut
+        $actu = new stdClass;
+
+        $actu->jour_publication = '';
+        $actu->heure_publication= '12:00';
+        $actu->texte = '';
+
 
         // transmission des valeurs par défaut à la vue
         return view('admin.actu.create', [
-            //...
+            'actu' => $actu,
         ]);
     }
 
@@ -38,8 +45,25 @@ class ActuController extends Controller
      *
      * @return Response
      */
-    public function store() 
+    public function store(Request $request) 
     {
+        $validated = $request->validate([
+            'jour_publication' => 'required|date|date_format:Y-m-d',
+            'heure_publication' => 'required',
+            'texte' => 'required|min:2|max:100',
+        ]);
+
+        // création d'une actu
+        $actu = new Actu();
+               
+        $actu->jour_publication = $request->get('jour_publication');
+        $actu->heure_publication = $request->get('heure_publication');
+        $actu->texte = $request->get('texte');
+        $actu->save();
+
+        $request->session()->flash('confirmation', 'La création a été effectuée.');
+
+        return redirect()->route('admin.actu.index');
 
     }
     /**
@@ -68,7 +92,7 @@ class ActuController extends Controller
     {   
         $validated = $request->validate([
             'jour_publication' => 'required|date|date_format:Y-m-d|',
-            'heure_publication' => 'required|date_format:H:i',
+            'heure_publication' => 'required|',
             'texte' => 'required|min:2',
         ]);
 
