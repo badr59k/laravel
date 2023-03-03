@@ -107,4 +107,20 @@ class ActuController extends Controller
 
         return redirect()->route('admin.actu.edit', ['id' => $actu->id]);
     }
+
+    public function delete(Request $request, int $id)
+    {
+        $actu = Actu::find($id);
+
+        if (!$actu) {
+            abort(404);
+        }
+
+        $actu->delete();
+
+        $request->session()->flash('confirmation', 'La suppression a bien été enregistré.');
+
+        return redirect()->route('admin.actu.index');
+    }
+
 }
