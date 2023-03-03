@@ -28,7 +28,7 @@
                 </table>
                 @else   
                     <table class="header-user" width ="100%">
-                            <td><a href="{{ route('home')}}"></a>Accueil</i></td>
+                            <td><a href="{{ route('home')}}"></a>Accueil</td>
                             <td><a href="{{ route('menu')}}"></a>Menu</td>
                             <th><a href="{{ route('home')}}"></a>O'CNAMO</th>
                             <td><a href="{{ route('contact')}}"></a>Contact</td>
