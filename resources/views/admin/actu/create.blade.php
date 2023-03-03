@@ -40,7 +40,7 @@
             </div>
             <div>
                 <label> Texte </label>
-                <input class="@error('texte') form--input--error @enderror" type="text" name="texte" id="" value="{{old('texte', $actu->texte) }}">
+                <input class="@error('texte') form--input--error @enderror" type="text" name="texte" id="" value="{{old('texte', $actu->texte) }}" placeholder="Entrez le texte de l'actualité">
                 @error('texte')
                     <div class=form-error--message> 
                         {{ $message }}
