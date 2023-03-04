@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use stdClass;
 use App\Models\Categorie;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,10 +27,14 @@ class CategorieController extends Controller
     public function create()
     {
         // valeur par defaut
+        $categorie = new stdClass;
+
+        $categorie->nom = '';
+        $categorie->description= '';
 
         // transmission des valeurs par défaut à la vue
         return view('admin.categorie.create', [
-            //...
+            'categorie' => $categorie,
         ]);
     }
 
@@ -38,9 +43,23 @@ class CategorieController extends Controller
      *
      * @return Response
      */
-    public function store() 
+    public function store(Request $request) 
     {
+        $validated = $request->validate([
+            'nom' => 'required|min:2|max:100',
+            'description' => 'required|min:2|max:100',
+        ]);
 
+        // création d'une categorie
+        $categorie = new categorie();
+               
+        $categorie->nom = $request->get('nom');
+        $categorie->description = $request->get('description');
+        $categorie->save();
+
+        $request->session()->flash('confirmation', 'La création a été effectuée.');
+
+        return redirect()->route('admin.categorie.index');
     }
 
     /**
