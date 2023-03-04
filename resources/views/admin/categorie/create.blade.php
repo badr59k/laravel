@@ -38,8 +38,9 @@
                     </div>
                 @enderror
             </div>
-            <div class="pied_formulaire">
-                <button>Créer</button>
-            </div>
-        </form>
+        </div>
+        <div class="pied_formulaire">
+            <button>Créer</button>
+        </div>
+    </form>
 @endsection
