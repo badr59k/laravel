@@ -12,7 +12,7 @@
     @endif
 
     <div class="bouton-ajouter">
-        <a href="{{ route('admin.reservation.create')}}">Ajouter</a>
+        <a href="{{ route('admin.reservation.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
 
     <table width="100%">

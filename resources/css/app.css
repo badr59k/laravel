@@ -309,7 +309,7 @@ hr {
 }
 
 .bouton-ajouter {
-    text-align: center;
+    text-align: end;
     font-size: x-large;
-    margin: 2%;
+    margin-bottom: 1%;
 }

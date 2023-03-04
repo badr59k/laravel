@@ -5,8 +5,8 @@
 @section('content')
     <h2> Admin - Catégorie - Liste </h2>
 
-    <div>
-        <a href="{{ route('admin.categorie.create')}}">Ajouter</a>
+    <div class="bouton-ajouter">
+        <a href="{{ route('admin.categorie.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
 
     <table width="100%">

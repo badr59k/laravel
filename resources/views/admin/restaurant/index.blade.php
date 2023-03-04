@@ -5,8 +5,8 @@
 @section('content')
     <h2> Admin - Restaurant - Liste </h2>
 
-    <div>
-        <a href="{{ route('admin.restaurant.create')}}">Ajouter</a>
+    <div class="bouton-ajouter">
+        <a href="{{ route('admin.restaurant.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
 
     <table>

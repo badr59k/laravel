@@ -4,11 +4,12 @@
 
 @section('content')
     <h2> Admin - Plat - Liste </h2>
-    <div>
-        <a href="{{ route('admin.plat.create')}}">Ajouter</a>
+
+    <div class="bouton-ajouter">
+        <a href="{{ route('admin.plat.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
 
-    <table>
+    <table width="100%">
         <tbody>  
             <tr>
                 <th>Nom</th>

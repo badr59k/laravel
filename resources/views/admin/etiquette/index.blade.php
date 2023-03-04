@@ -4,8 +4,9 @@
 
 @section('content')
     <h2> Admin - Etiquette - Liste </h2>
-    <div>
-        <a href="{{ route('admin.etiquette.create')}}">Ajouter</a>
+
+    <div class="bouton-ajouter">
+        <a href="{{ route('admin.etiquette.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
 
     <table width = "100%">
