@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <div>
+    <div class="bouton-ajouter">
         <a href="{{ route('admin.reservation.create')}}">Ajouter</a>
     </div>
 

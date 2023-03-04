@@ -241,7 +241,7 @@ table {
 table .button-supprimer {
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    background-color: rgb(154, 19, 19);
+    background-color: rgb(228, 6, 6);
     width: 8rem;
 }
 
@@ -308,3 +308,8 @@ hr {
     background-color: black;
 }
 
+.bouton-ajouter {
+    text-align: center;
+    font-size: x-large;
+    margin: 2%;
+}

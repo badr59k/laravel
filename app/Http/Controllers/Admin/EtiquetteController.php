@@ -83,6 +83,21 @@ class EtiquetteController extends Controller
 
         return redirect()->route('admin.etiquette.edit', ['id' => $etiquette->id]);
     }
+
+    public function delete(Request $request, int $id)
+    {
+        $etiquette = Etiquette::find($id);
+
+        if (!$etiquette) {
+            abort(404);
+        }
+
+        $etiquette->delete();
+
+        $request->session()->flash('confirmation', 'La suppression a bien été enregistré.');
+
+        return redirect()->route('admin.etiquette.index');
+    }
 }
 
 

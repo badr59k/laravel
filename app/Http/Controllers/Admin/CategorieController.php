@@ -83,4 +83,19 @@ class CategorieController extends Controller
 
         return redirect()->route('admin.categorie.edit', ['id' => $categorie->id]);
     }
+
+    public function delete(Request $request, int $id)
+    {
+        $categorie = Categorie::find($id);
+
+        if (!$categorie) {
+            abort(404);
+        }
+
+        $categorie->delete();
+
+        $request->session()->flash('confirmation', 'La suppression a bien été enregistré.');
+
+        return redirect()->route('admin.categorie.index');
+    }
 }
