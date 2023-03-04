@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="pied_formulaire">
-            <button>Créer</button>
+            <button>Valider</button>
         </div>
     </form>
 @endsection
