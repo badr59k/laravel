@@ -5,6 +5,12 @@
 @section('content')
     <h2> Admin - Etiquette - Liste </h2>
 
+    @if (Session::has('confirmation'))
+    <div class=form-confirmation--message>
+        {{ Session::get('confirmation')}}
+    </div>
+    @endif
+
     <div class="bouton-ajouter">
         <a href="{{ route('admin.etiquette.create')}}"><i class="fa-solid fa-plus"></i> Créer</a>
     </div>
