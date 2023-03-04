@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use stdClass;
 use App\Models\Etiquette;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,10 +27,14 @@ class EtiquetteController extends Controller
     public function create()
     {
         // valeur par defaut
+        $etiquette = new stdClass;
+
+        $etiquette->nom = '';
+        $etiquette->description= '';
 
         // transmission des valeurs par défaut à la vue
         return view('admin.etiquette.create', [
-            //...
+            'etiquette' => $etiquette,
         ]);
     }
 
@@ -38,9 +43,23 @@ class EtiquetteController extends Controller
      *
      * @return Response
      */
-    public function store() 
+    public function store(Request $request) 
     {
+        $validated = $request->validate([
+            'nom' => 'required|min:2|max:100',
+            'description' => 'required|min:2|max:100',
+        ]);
 
+        // création d'une etiquette
+        $etiquette = new Etiquette();
+               
+        $etiquette->nom = $request->get('nom');
+        $etiquette->description = $request->get('description');
+        $etiquette->save();
+
+        $request->session()->flash('confirmation', 'La création a été effectuée.');
+
+        return redirect()->route('admin.etiquette.index');
     }
 
     /**
