@@ -22,8 +22,8 @@
                     <td> {{$actu->jour_publication}}</td>
                     <td> {{$actu->heure_publication}}</td>
                     <td> {{$actu->texte}}</td>
-                    <center>
-                        <td>
+                    <td>
+                        <center>
                             <a href="{{ route('admin.actu.edit', ['id' => $actu->id]) }}">modifier</a>
                             
                             <form action="{{ route('admin.actu.delete', ['id' => $actu->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
@@ -32,8 +32,8 @@
                                 <button class="button-supprimer" type="submit">Supprimer</button>
                                 {{-- <a href="{{ route('admin.actu.delete', ['id' => $actu->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
                             </form> 
-                        </td>
-                    </center>
+                        </center>
+                    </td>
                 </tr> 
             @endforeach
         </tbody>
