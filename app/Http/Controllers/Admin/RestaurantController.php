@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use stdClass;
 use App\Models\Restaurant;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,10 +27,14 @@ class RestaurantController extends Controller
     public function create()
     {
         // valeur par defaut
+        $restaurant = new stdClass;
+
+        $restaurant->cle = '';
+        $restaurant->valeur= '';
 
         // transmission des valeurs par défaut à la vue
         return view('admin.restaurant.create', [
-            //...
+            'restaurant' => $restaurant,
         ]);
     }
 
@@ -38,9 +43,23 @@ class RestaurantController extends Controller
      *
      * @return Response
      */
-    public function store() 
+    public function store(Request $request) 
     {
+        $validated = $request->validate([
+            'cle' => 'required|min:2|max:100',
+            'valeur' => 'required|min:2|max:100',
+        ]);
 
+        // création d'une restaurant
+        $restaurant = new restaurant();
+               
+        $restaurant->cle = $request->get('cle');
+        $restaurant->cle = $request->get('valeur');
+        $restaurant->save();
+
+        $request->session()->flash('confirmation', 'La création a été effectuée.');
+
+        return redirect()->route('admin.restaurant.index');
     }
 
     /**
