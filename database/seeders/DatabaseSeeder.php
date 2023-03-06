@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             CategorieSeeder::class,
+            PhotoAmbianceSeeder::class,
             ActuSeeder::class,
             PhotoPlatSeeder::class,
             EtiquetteSeeder::class,
