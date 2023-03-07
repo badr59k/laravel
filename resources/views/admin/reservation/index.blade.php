@@ -36,7 +36,7 @@
                     <td> {{$reservation->email}} </td>
                     <td>  
                         <center>
-                            <a class="lien-modif" href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}">Modifier</a> 
+                            <a class="lien-modif" href="{{ route('admin.reservation.edit', ['id' => $reservation->id]) }}"><button class="button-modifier">Modifier</button></a> 
                         
                             <form action="{{ route('admin.reservation.delete', ['id' => $reservation->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
                                 @csrf

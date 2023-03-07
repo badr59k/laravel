@@ -28,7 +28,7 @@
                     <td> {{$etiquette->description}}</td>
                     <td>
                         <center>
-                            <a href="{{ route('admin.etiquette.edit', ['id' => $etiquette->id]) }}">modifier</a>
+                            <a href="{{ route('admin.etiquette.edit', ['id' => $etiquette->id]) }}"><button class="button-modifier">Modifier</button></a>
                         
                             <form action="{{ route('admin.etiquette.delete', ['id' => $etiquette->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
                                 @csrf

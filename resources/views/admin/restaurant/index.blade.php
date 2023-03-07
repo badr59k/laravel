@@ -26,7 +26,7 @@
                 <tr>
                     <td> {{$restaurant->cle}}</td>
                     <td> {{$restaurant->valeur}}</td>
-                    <td><a href="{{ route('admin.restaurant.edit', ['id' => $restaurant->id]) }}">modifier</a></td>
+                    <td><a href="{{ route('admin.restaurant.edit', ['id' => $restaurant->id]) }}"><button class="button-modifier">Modifier</button></a></td>
                 </tr> 
             @endforeach
         </tbody>
