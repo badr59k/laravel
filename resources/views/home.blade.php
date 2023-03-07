@@ -13,16 +13,16 @@
             </div>
             <a href="{{ route('reservation')}}"><button id="bouton-reservation"> Réserver</button></a>
         </div>
-    </center>
-
-    <h3> Dernières actualités : </h3>
+        
+        <h3> Dernières actualités : </h3>
         <table width="50%">
             @foreach ($actus as $actu)
             <tr>
-                <td> {{$actu->jour_publication }}</td>
+                <th> {{$actu->jour_publication }}</th>
                 <td>{{$actu->texte}}</td>
             </tr> 
             @endforeach
         </table>
+    </center>
 
 @endsection
