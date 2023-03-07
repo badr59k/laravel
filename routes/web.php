@@ -31,6 +31,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/hello/{name}', [HelloController::class, 'index'])->name('hello');
 
 Route::get('/reservation', [ReservationController::class, 'index'])->name('reservation');
+Route::post('/reservation', [ReservationController::class, 'store'])->name('reservation.store');
+
 
 Route::get('/menu', [MenuController::class, 'index'])->name('menu');
 
