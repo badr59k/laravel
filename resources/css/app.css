@@ -142,8 +142,9 @@ img{
 }
 
 img.menu--photo-plat{
-    margin: 10px;
-    width: 150px;
+    margin-left: 10px;
+    padding-right: 10px;
+    height: 100px;
 }
 
 footer {
@@ -241,7 +242,7 @@ table {
 table .button-supprimer {
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    background-color: rgb(228, 6, 6);
+    background-color: rgb(185, 22, 22);
     width: 8rem;
 }
 
@@ -312,4 +313,14 @@ hr {
     text-align: end;
     font-size: x-large;
     margin-bottom: 1%;
+    margin-right: 10px;
+}
+
+
+table .button-modifier {
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(50, 123, 50);
+    width: 8rem;
 }
