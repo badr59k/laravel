@@ -62,4 +62,19 @@ class PlatController extends Controller
 
         return redirect()->route('admin.plat.index');
     }
+
+    public function delete(Request $request, int $id)
+    {
+        $plat = Plat::find($id);
+
+        if (!$plat) {
+            abort(404);
+        }
+
+        $plat->delete();
+
+        $request->session()->flash('confirmation', 'La suppression a bien été enregistré.');
+
+        return redirect()->route('admin.plat.index');
+    }
 }

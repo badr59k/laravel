@@ -30,7 +30,17 @@
                     <td> {{$plat->prix}}</td>
                     <td> {{$plat->description}}</td>
                     <td> {{$plat->epingle}}</td>
-                    {{-- <td><a href="{{ route('admin.plat.edit', ['id' => $plat->id]) }}">modifier</a></td> --}}
+                    <td>
+                        
+                        {{-- <a href="{{ route('admin.plat.edit', ['id' => $plat->id]) }}">modifier</a> --}}
+
+                        <form action="{{ route('admin.plat.delete', ['id' => $plat->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
+                            @csrf
+                            @method('DELETE')
+                            <button class="button-supprimer" type="submit">Supprimer</button>
+                            {{-- <a href="{{ route('admin.plat.delete', ['id' => $plat->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
+                        </form>
+                    </td>
                 </tr> 
             @endforeach
         </tbody>
