@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use stdClass;
 use App\Http\Controllers\Controller;
 use App\Models\Categorie;
 use App\Models\Etiquette;
@@ -23,11 +24,17 @@ class PlatController extends Controller
 
     public function create()
     {
+        $plat = new stdClass;
+        $plat->nom = '';
+        $plat->prix= '';
+        $plat->description= '';
+        $plat->epingle= '';
         $categories = Categorie::all();
         $etiquettes = Etiquette::all();
         $photoPlats = PhotoPlat::all();
 
         return view ('admin.plat.create', [
+            'plat'=> $plat,
             'categories' => $categories,
             'etiquettes' => $etiquettes,
             'photoPlats' => $photoPlats,
@@ -36,6 +43,23 @@ class PlatController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+
+        // création d'une plat
+        $plat = new Plat();
+        
+        $plat->nom = $request->get('nom');
+        $plat->prix = $request->get('prix');
+        $plat->description = $request->get('description');
+        $plat->epingle = ($request->get('epingle') == 'on' ? true : false);
+        $plat->photo_plat_id = $request->get('photo_plat_id');
+        $plat->categorie_id = $request->get('categorie_id');
+        // $plat->created_at = "2023-03-06 13:26:30";
+        // $plat->updated_at = "2023-03-06 13:26:30";
+        $plat->save();
+
+        $request->session()->flash('confirmation', 'La création a été effectuée.');
+
+        return redirect()->route('admin.plat.index');
     }
 }
