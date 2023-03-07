@@ -30,14 +30,20 @@
                     <td> {{$actu->texte}}</td>
                     <td>
                         <center>
-                            <a href="{{ route('admin.actu.edit', ['id' => $actu->id]) }}">modifier</a>
-                            
-                            <form action="{{ route('admin.actu.delete', ['id' => $actu->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
-                                @csrf
-                                @method('DELETE')
-                                <button class="button-supprimer" type="submit">Supprimer</button>
-                                {{-- <a href="{{ route('admin.actu.delete', ['id' => $actu->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
-                            </form> 
+                            <ul class="liste-actions">
+                                <li>
+                                    <a class="lien-modifier" href="{{ route('admin.actu.edit', ['id' => $actu->id]) }}">Modifier</a>
+                                </li>
+                                
+                                <li>
+                                    <form action="{{ route('admin.actu.delete', ['id' => $actu->id])}}" method="post" onsubmit="return window.confirm('Etes-vous sûr de vouloir supprimer cet élément ?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="button-supprimer" type="submit">Supprimer</button>
+                                        {{-- <a href="{{ route('admin.actu.delete', ['id' => $actu->id])}}" onclick="event.preventDefault(); this.closet('form').submit(); }">Supprimer</a> --}}
+                                    </form> 
+                                </li>
+                            </ul>
                         </center>
                     </td>
                 </tr> 
