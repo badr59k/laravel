@@ -88,7 +88,7 @@
         </div>
     </div>
     <div class="pied_formulaire">
-        <button>Valider</button>
+        <button>Réserver</button>
     </div>
     </form>
     @endsection
