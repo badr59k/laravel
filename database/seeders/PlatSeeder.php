@@ -125,7 +125,7 @@ class PlatSeeder extends Seeder
             $plat->epingle = (bool) random_int(0, 1);
 
             // affectation d'une photo
-            $plat->photo_plat_id = $photo->id;
+            $plat->photo_plat_id= random_int(1, 5);
 
             // affectation d'une catégorie
             // la catégorie est choisie au hasard
