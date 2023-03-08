@@ -26,6 +26,11 @@
             <td><a href="{{ route('admin.plat.create')}}">Création d'un plat</a></td>
         </tr>
         <tr>
+            <th>Photo Plats</th>
+            <td><a href="{{ route('admin.photoplat.index')}}">Liste des photos de plat</a></td>
+            <td><a href="{{ route('admin.photoplat.create')}}">Ajout d'une photo de plat</a></td>
+        </tr>
+        <tr>
             <th>Etiquette</th>
             <td><a href="{{ route('admin.etiquette.index')}}">Liste des étiquettes</a></td>
             <td><a href="{{ route('admin.etiquette.create')}}">Création d'une étiquette</a></td>

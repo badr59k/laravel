@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\EtiquetteController as AdminEtiquetteController;
 use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
+use App\Http\Controllers\Admin\PhotoPlatController as AdminPhotoPlatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
@@ -104,6 +105,17 @@ Route::get('/admin/actu/{id}/edit', [AdminActuController::class, 'edit'])->middl
 Route::put('/admin/actu/{id}', [AdminActuController::class, 'update'])->middleware('auth')->name('admin.actu.update');
 
 Route::delete('/admin/actu/{id}', [AdminActuController::class, 'delete'])->middleware('auth')->name('admin.actu.delete');
+
+// CRUD PhotoPlat
+Route::get('/admin/photoplat', [AdminPhotoPlatController::class, 'index'])->middleware('auth')->name('admin.photoplat.index');
+
+Route::get('/admin/photoplat/create', [AdminPhotoPlatController::class, 'create'])->middleware('auth')->name('admin.photoplat.create');
+Route::post('/admin/photoplat', [AdminPhotoPlatController::class, 'store'])->middleware('auth')->name('admin.photoplat.store');
+
+Route::get('/admin/photoplat/{id}/edit', [AdminPhotoPlatController::class, 'edit'])->middleware('auth')->name('admin.photoplat.edit');
+Route::put('/admin/photoplat/{id}', [AdminPhotoPlatController::class, 'update'])->middleware('auth')->name('admin.photoplat.update');
+
+Route::delete('/admin/photoplat/{id}', [AdminPhotoPlatController::class, 'delete'])->middleware('auth')->name('admin.photoplat.delete');
 
 // routes de breeze
 Route::get('/dashboard', function () {
