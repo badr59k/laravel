@@ -11,11 +11,6 @@
             <td><a href="{{ route('admin.reservation.create')}}">Création d'une réservation</a></td>
         </tr>
         <tr>
-            <th>Actualités</th>
-            <td><a href="{{ route('admin.actu.index')}}">Liste des actualités</a></td>
-            <td><a href="{{ route('admin.actu.create')}}">Création d'une actualité</a></td>
-        </tr>
-        <tr>
             <th>Catégories</th>
             <td><a href="{{ route('admin.categorie.index')}}">Liste des catégories</a></td>
             <td><a href="{{ route('admin.categorie.create')}}">Création d'une catégorie</a></td>
@@ -34,6 +29,16 @@
             <th>Etiquette</th>
             <td><a href="{{ route('admin.etiquette.index')}}">Liste des étiquettes</a></td>
             <td><a href="{{ route('admin.etiquette.create')}}">Création d'une étiquette</a></td>
+        </tr>
+        <tr>
+            <th>Actualités</th>
+            <td><a href="{{ route('admin.actu.index')}}">Liste des actualités</a></td>
+            <td><a href="{{ route('admin.actu.create')}}">Création d'une actualité</a></td>
+        </tr>
+        <tr>
+            <th>Photo d'Ambiance</th>
+            <td><a href="{{ route('admin.photoambiance.index')}}">Liste des photos d'ambiance</a></td>
+            <td><a href="{{ route('admin.photoambiance.create')}}">Ajout d'une photo d'ambiance</a></td>
         </tr>
         <tr>
             <th>Information du restaurant</th>
