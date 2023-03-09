@@ -45,7 +45,7 @@
                 @guest
                 <li> <a href="{{ route('login')}}"> <i class="fa-regular fa-user"></i></a></li>
                 @endguest
-                <li>Copyright O Cnamo, 2022</li>
+                <li>Copyright O Cnamo, 2023</li>
                 <li>//</li>
                 <li><a href="{{ route('contact')}}">Contact</a></li>
                 <li>//</li>

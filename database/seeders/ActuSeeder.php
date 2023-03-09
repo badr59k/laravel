@@ -20,19 +20,19 @@ class ActuSeeder extends Seeder
 
         $actuDatas = [
             [
-                "jour_publication" => "2023-02-10",
+                "jour_publication" => "2023-03-10",
                 "heure_publication" => "05:44:00",
-                "texte" => "Ceci est la 1ère actualité",
+                "texte" => "Notre restaurant propose désormais des plats Veggie",
             ],
             [
-                "jour_publication" => "2023-02-14",
+                "jour_publication" => "2023-03-14",
                 "heure_publication" => "22:25:00",
-                "texte" => "Ceci est la 2ème actualité",
+                "texte" => "Un 2ème restaurant O'Cnamo dans ta ville !!! Bientôt",
             ],
             [
-                "jour_publication" => "2023-02-16",
+                "jour_publication" => "2023-03-16",
                 "heure_publication" => "17:12:00",
-                "texte" => "Ceci est la 3ème actualité",
+                "texte" => "O'Cnamo en livraison d'ici mai 2023",
             ],
         ];
 
