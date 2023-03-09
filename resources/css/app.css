@@ -147,8 +147,9 @@ img{
 
 .menu--photo-plat{
     margin-left: 10px;
-    padding-right: 18px;
-    width: 100%;
+    margin-right: 10px;
+    width: 42%;
+    border-radius: 5%;
 }
 
 footer {
@@ -257,10 +258,10 @@ table .lien-modif {
 
 #bouton-reservation {
     position: absolute;
-    width: 640px;
+    width: 500px;
     height: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(108, 7, 7);
+    background-color: rgb(162, 168, 95);
     color: white; 
     font-size: 30px;
     border: none;  
@@ -310,7 +311,7 @@ iframe.map {
 
 hr {
     height: 2px;
-    background-color: black;
+    background-color: white;
 }
 
 .bouton-ajouter {
