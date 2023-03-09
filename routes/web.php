@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController
 use App\Http\Controllers\Admin\ActuController as AdminActuController;
 use App\Http\Controllers\Admin\PlatController as AdminPlatController;
 use App\Http\Controllers\Admin\PhotoPlatController as AdminPhotoPlatController;
+use App\Http\Controllers\Admin\PhotoAmbianceController as AdminPhotoAmbianceController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
@@ -116,6 +117,15 @@ Route::get('/admin/photoplat/{id}/edit', [AdminPhotoPlatController::class, 'edit
 Route::put('/admin/photoplat/{id}', [AdminPhotoPlatController::class, 'update'])->middleware('auth')->name('admin.photoplat.update');
 
 Route::delete('/admin/photoplat/{id}', [AdminPhotoPlatController::class, 'delete'])->middleware('auth')->name('admin.photoplat.delete');
+
+// CRUD PhotoPlat
+Route::get('/admin/photoambiance', [AdminPhotoAmbianceController::class, 'index'])->middleware('auth')->name('admin.photoambiance.index');
+
+Route::get('/admin/photoambiance/create', [AdminPhotoAmbianceController::class, 'create'])->middleware('auth')->name('admin.photoambiance.create');
+Route::post('/admin/photoambiance', [AdminPhotoAmbianceController::class, 'store'])->middleware('auth')->name('admin.photoambiance.store');
+
+Route::delete('/admin/photoambiance/{id}', [AdminPhotoAmbianceController::class, 'delete'])->middleware('auth')->name('admin.photoambiance.delete');
+
 
 // routes de breeze
 Route::get('/dashboard', function () {

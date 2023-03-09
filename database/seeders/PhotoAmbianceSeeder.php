@@ -17,22 +17,22 @@ class PhotoAmbianceSeeder extends Seeder
     {
         $photoAmbianceDatas = [
             [
-                'chemin' => "img/clem-onojeghuo-zlABb6Gke24-unsplash.jpg",
+                'chemin' => "img/ambiance/6f760bd2-7463-48d6-be2a-ee7a48bfcc56.jfif",
                 'ordre' => '1',
                 'legende' => 'ceci est la 1ere image',
             ],
             [
-                'chemin' => "img/Cuisinier.jpg",
+                'chemin' => "img/ambiance/43c17afd-284f-48fc-b35c-8c0e2cf8e464.jfif",
                 'ordre' => '2',
                 'legende' => 'ceci est la 2eme image',
             ],
             [
-                'chemin' => "img/Image restaurant.jpg",
+                'chemin' => "img/ambiance/bfd37413-91ad-4e1a-b697-f40f3742d99a.jfif",
                 'ordre' => '3',
                 'legende' => 'ceci est la 3eme image',
             ],
             [
-                'chemin' => "img/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+                'chemin' => "img/ambiance/eaf30327-e0ae-4066-8ecc-a5b816344447.jfif",
                 'ordre' => '4',
                 'legende' => 'ceci est la 4eme image',
             ],
