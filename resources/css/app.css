@@ -115,11 +115,15 @@ img{
     overflow: hidden;
 }
 
-.image-ambiance {
+.images-accueil {
     display: flex;
     animation-duration: 20s;
     animation-name: mesImages;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; 
+    width: 100%;
+}
+.image-ambiance {
+    transform: translateY(-200px);
 }
 
 @keyframes mesImages {
@@ -141,10 +145,10 @@ img{
 
 }
 
-img.menu--photo-plat{
+.menu--photo-plat{
     margin-left: 10px;
-    padding-right: 10px;
-    height: 100px;
+    padding-right: 18px;
+    width: 100%;
 }
 
 footer {
